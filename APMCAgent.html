@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated Login Form</title>
+    <link rel="stylesheet" type="text/css" href="APMCAgent.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .bg-image {
+            background-image: url('6.avif');
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .login-content {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .login-content img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .input-div {
+            margin-bottom: 15px;
+        }
+
+        .input-div .i {
+            position: relative;
+        }
+
+        .input-div .i input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #d2691e;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #8b4513;
+        }
+
+        .title {
+            color: white; /* Set color to white */
+        }
+    </style>
+</head>
+<body class="bg-image">
+    <div class="container">
+        <div class="login-content">
+            <form id="loginForm" action="market.php" method="post" onsubmit="return validateForm()">
+                <img src="undraw_online_stats_0g94.svg" class="left-image">
+                <h2 class="title">AGENT</h2> 
+                <h3 class="title">APMC Market Entry portal </h3>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>LOTID</h5>
+                        <input type="text" class="input" required name="lot_id" autocomplete="off">
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>SHOPID</h5>
+                        <input type="text" class="input" required name="shop_id" autocomplete="off">
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Moisture of the Seeds(%)</h5>
+                        <input type="text" class="input" required name="mos" autocomplete="off">
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Color of the Seeds</h5>
+                        <input type="text" class="input" required name="cos" autocomplete="off">
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Weight of the seeds(kg/gm)</h5>
+                        <input type="text" class="input" required name="wos" autocomplete="off">
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Amount of Sand/Stones(kg/gm)</h5>
+                        <input type="text" class="input" required name="aos" autocomplete="off">
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Weight above sieve(kg/gm)</h5>
+                        <input type="text" class="input" required name="was" autocomplete="off">
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Weight below sieve(kg/gm)</h5>
+                        <input type="text" class="input" required name="wbs" autocomplete="off">
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Total number of Bags</h5>
+                        <input type="text" class="input" required name="tnb" autocomplete="off">
+                    </div>
+                </div>
+                <!-- Add other input fields similarly -->
+
+                <input type="submit" class="btn" value="Submit">
+            </form>
+            <div id="successMessage" style="display:none; color:rgb(137, 119, 2);"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="APMCAgent.js"></script>
+    <script>
+        function validateForm() {
+            var inputs = document.querySelectorAll('.input');
+            var allFilled = true;
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].value === '') {
+                    allFilled = false;
+                    break;
+                }
+            }
+            if (allFilled) {
+                document.getElementById('successMessage').style.display = 'block';
+                alert('Form submitted successfully!');
+                return true;
+            } else {
+                alert('Please fill in all fields.');
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

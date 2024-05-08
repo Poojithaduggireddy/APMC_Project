@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-XZh+Ryb1P1QuJ/i6ZPGDmBEymUdZgP6XMY9hptI0dtxbQBldff/w2K9cl06p6E9tgo+2B5XJ6hkSFv8kN7CtYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<body>
+    <header class="header">
+        <a href="home.html" class="logo">APMC Market</a>
+        <nav class="nav-items">
+          <a href="#">Home</a>
+          <a href="display_data_winners.php">Auction Winner List</a>
+          <a href="loginhome.php">Login</a>
+        </nav>
+      </header>
+      <main>
+        <div class="intro">
+          <h1>A Web Portal for Groundnut Details Collection.</h1>
+          <p>To access the portal for groundnut information management,<br> exclusive to agents, managers, and administrators,<br> please click the login button below.</p>
+          <button onclick="window.location.href = 'loginhome.php';">Login Here</button>
+        </div>
+        <div class="about-me">
+          <div class="about-me-text" id="auction">
+            <h2>Auction Winners</h2>
+            <p>To discover the auction winner's details, just click the button below.</p>
+            <button onclick="window.location.href = 'display_data_winners.php';">Show Winners</button>
+
+          </div>
+          <img src="https://sambadenglish.com/wp-content/uploads/2020/10/auction.png" alt="winner">
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="copy">&copy;MVSR</div>
+        <div class="bottom-links">
+          
+          <div class="links">
+            <span>Social Links</span>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

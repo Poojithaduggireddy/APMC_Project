@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated Login Form</title>
+    <link rel="stylesheet" type="text/css" href="Farmer.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .bg-image {
+            background-image: url('12.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .login-content {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            height:100%;
+        }
+
+        .login-content img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .input-div {
+            margin-bottom: 15px;
+        }
+
+        .input-div .i {
+            position: relative;
+        }
+
+        .input-div .i input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #d2691e;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #8b4513;
+        }
+
+        .title {
+            color: white; /* Set color to white */
+        }
+    </style>
+</head>
+<body class="bg-image">
+    <div class="container">
+    <div class="login-content"  style="height: 165vh;">
+            <form action="farmer.php" method="post" autocomplete="off">
+                <img src="undraw.svg" class="left-image">
+                <h2 class="title">AGENT</h2> 
+                <h3 class="title">Farmer Market Entry portal </h3>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Farmer id</h5>
+                        <input type="text" class="input" required name="farmer_id">
+                    </div>
+                </div>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Farmer Name</h5>
+                        <input type="text" class="input" required name="farmer_name">
+                    </div>
+                </div>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Village Name</h5>
+                        <input type="text" class="input" required name="village_name">
+                    </div>
+                </div>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Mandal Name,District Name</h5>
+                        <input type="text" class="input" required name="man_dis">
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Phone Number</h5>
+                        <input type="text" class="input" required name="phn">
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Moisture of the Seeds(%)</h5>
+                        <input type="text" class="input" required name="mos">
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Color of the Seeds</h5>
+                        <input type="text" class="input" required name="cos">
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Weight of the seeds(kg or gm)</h5>
+                        <input type="text" class="input" required name="wos">
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Amount of Sand/Stones(kg or gm)</h5>
+                        <input type="text" class="input" required name="aos">
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Weight above seive</h5>
+                        <input type="text" class="input" required name="was">
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Weight below seive</h5>
+                        <input type="text" class="input" required name="wbs">
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Total number of Bags</h5>
+                        <input type="text" class="input" required name="tnb">
+                    </div>
+                </div>
+                <input type="submit" class="btn" value="Submit">
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

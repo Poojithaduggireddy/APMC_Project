@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated Login Form</title>
+    <link rel="stylesheet" type="text/css" href="manager.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .bg-image {
+            background-image: url('sand.avif');
+            background-size: 65%;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.3);
+            background-repeat: no-repeat; /* Ensure background image is displayed only once */
+            background-size: cover; /* Make the background image cover the entire page */
+
+
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .login-content {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .login-content img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .input-div {
+            margin-bottom: 15px;
+        }
+
+        .input-div .i {
+            position: relative;
+        }
+
+        .input-div .i input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #d2691e;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #8b4513;
+        }
+
+        .title {
+            color: white; /* Set color to white */
+        }
+        .input-div .div h5 {
+    margin: 0;
+    padding: 5px 0; /* Increase vertical padding */
+    font-size: 1rem; /* Increase font size */
+}
+
+    </style>
+</head>
+<body class="bg-image">
+    <div class="container">
+        <div class="login-content">
+            <form action="winner.php" method="post" autocomplete="off">
+                <img src="undraw_online_stats_0g94.svg" class="left-image">
+                <h2 class="title">MANAGER</h2> 
+                <h3 class="title">APMC Market</h3>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Name</h5>
+                        <input type="text" class="input" required name="name">
+                    </div>
+                </div>
+                <div class="input-div">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>LOTID</h5>
+                        <input type="text" class="input" required name="lot_id">
+                    </div>
+                </div>
+                <input type="submit" class="btn" value="Submit">
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="manager.js"></script>
+</body>
+</html>
